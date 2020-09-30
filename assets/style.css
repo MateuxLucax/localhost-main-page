@@ -1,0 +1,92 @@
+:root {
+	--white: #f4f5f6;
+	--blue: #008bcc;
+	--red: #e1006b;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 56.25%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Nunito", cursive;
+	font-weight: 700;
+	font-size: 1.6rem;
+	font-style: normal;
+	background-color: var(--white);
+	padding: 0 3.2rem;
+}
+
+*::selection {
+	background: var(--blue);
+	color: var(--white);
+}
+
+header {
+	width: 100%;
+	height: 4.8rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-top: 3.2rem;
+	flex-direction: row;
+}
+
+header img {
+	height: 4.8rem;
+}
+
+header h1 {
+	margin-left: 1.6rem;
+	font-size: 3.2rem;
+	line-height: 1;
+}
+
+main {
+	margin: 3.2rem auto;
+	max-width: 160rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+	grid-gap: 1.6rem;
+	align-items: start;
+}
+
+a {
+	padding: 1.6rem 0;
+	font-size: 2.4rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	justify-content: center;
+	border-radius: 10rem;
+	color: var(--white);
+	transition: opacity 0.2s ease;
+}
+
+a:nth-child(odd) {
+	background-color: var(--blue);
+}
+
+a:nth-child(even) {
+	background-color: var(--red);
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+a:focus,
+a:active {
+	opacity: 0.7;
+}
